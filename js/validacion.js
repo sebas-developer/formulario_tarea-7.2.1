@@ -7,24 +7,13 @@ function showAlertError() {
 }
 
 document.getElementById('regBtn').addEventListener('click', () => {
-
     let inputs = document.getElementsByClassName('form-control');
-
-    if (inputs == null) {
-    showAlertError();
-    }
-
-})
-
-document.getElementById('regBtn').addEventListener('click', () => {
-
     let password1 = document.getElementById('password1').value;
     let password2 = document.getElementById('password2').value;
 
-    if (password1 == password2) {
+    if (password1 !== '' && password1 === password2 && inputs.length !== 0) {
         showAlertSuccess();
-    }
-    else {
+    } else {
         showAlertError();
     }
-})
+});
