@@ -12,7 +12,7 @@ document.getElementById('regBtn').addEventListener('click', () => {
     let password1 = document.getElementById('password1').value;
     let password2 = document.getElementById('password2').value;
 
-    if (password1 !== '' && password1 === password2 && inputs.length !== 0 && check = true) {
+    if (password1.length > 6 && password2.length > 6 && password1 !== '' && password1 === password2 && inputs.length !== 0 && check == true) {
         showAlertSuccess();
     } else {
         showAlertError();
